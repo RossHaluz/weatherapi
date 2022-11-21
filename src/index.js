@@ -7,7 +7,7 @@ const list = document.querySelector('.list')
 form.addEventListener('submit', onSearchForm)
 
 const DEBOUNCE_DELAY = 300;
-const BASE_URL = "http://api.weatherapi.com/v1";
+const BASE_URL = "https://api.weatherapi.com/v1";
 const KEY = "59dd275128be4309bea171611222011";
 
 function onSearchForm(evt) {
