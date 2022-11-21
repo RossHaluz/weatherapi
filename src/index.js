@@ -21,7 +21,9 @@ function onSearchForm(evt) {
         }
     } = evt.currentTarget.elements
 
-    forecastApi(inputSearch, daysSearch).then(data => renderMarkup(data.forecast.forecastday))
+    forecastApi(inputSearch, daysSearch).then(data => renderMarkup(data.forecast.forecastday)).catch(err => {
+        Notiflix.Notify.failure("Incorrect city name")
+    })
 }
 
 function renderMarkup(arr) {
